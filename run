@@ -1,0 +1,4 @@
+python3 phifm.py
+python3 calc.py
+python3 draw.py
+gnuplot return.plt
