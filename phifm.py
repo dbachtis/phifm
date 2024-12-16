@@ -10,7 +10,7 @@ alpha=5.0
 sweeps=110001
 thermalization=10000
 std=np.sqrt(1/(2*mu))
-ising=np.random.normal(0,std),size=N)
+ising=np.random.normal(0,std,size=N)
 
 f = open('confs.dat','w')
 f.close()
