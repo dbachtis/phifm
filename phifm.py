@@ -9,11 +9,11 @@ alpha=5.0
 
 sweeps=110001
 thermalization=10000
-
-ising=np.random.normal(0,1,size=N)
+std=np.sqrt(1/(2*mu))
+ising=np.random.normal(0,std),size=N)
 
 f = open('confs.dat','w')
-
+f.close()
 for j in range(sweeps):
   for i in range(N):
     random_spin=np.random.randint(N)
@@ -43,7 +43,6 @@ for j in range(sweeps):
     sum1=sum1-alpha*ising[random_spin]*magnetization
 
     mean=sum1/(2*mu)
-    std=np.sqrt(1/(2*mu))
     new_value=np.random.normal(mean,std)
     quartic=np.exp(-lambd*new_value**4)
 
